@@ -7,8 +7,14 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="app">
-    
+  <div id="app" class="container">
+    <h1>Calculadora de Equações Lógicas</h1>
+    <div class="input-group">
+      <label for="equation">Equação Lógica:</label>
+      <input type="text" id="equation" placeholder="Ex: (A && B) || !C" />
+      <button onclick="calcular()">Calcular</button>
+    </div>
+    <div id="resultado"></div>
   </div>
   <script src="script.js"></script>
 </body>
