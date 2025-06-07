@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teste de HTML e CSS | Desenvolvimento Web Profissional</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,26 +17,49 @@
         <span>11 1234-1234</span> <span>11 1234-1234</span>
       </div>
     </div>
-    <nav class="main-nav" role="navigation">
+    <nav class="main-nav" role="navigation" aria-label="Menu principal">
       <ul class="nav-list">
         <li class="nav-item"><a href="#home" class="nav-link">HOME</a></li>
         <li class="nav-item dropdown" aria-haspopup="true">
           <a href="#empresa" class="nav-link dropdown-toggle" aria-expanded="false">EMPRESA</a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#" role="menuitem">SUBMENU 1</a></li>
+            <li><a href="#submenu1" role="menuitem">SUBMENU 1</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown" aria-haspopup="true">
           <a href="#clientes" class="nav-link dropdown-toggle" aria-expanded="false">CLIENTES</a>
           <ul class="dropdown-menu submenu-2" role="menu">
-            <li><a href="#" role="menuitem">SUBMENU 2</a></li>
+            <li><a href="#submenu2" role="menuitem">SUBMENU 2</a></li>
           </ul>
         </li>
         <li class="nav-item"><a href="#contato" class="nav-link">CONTATO</a></li>
       </ul>
     </nav>
   </header>
+  <main class="main-content" role="main">
+    <section class="slider-section" aria-label="Banner principal" id="home">
+      <div class="splide" id="main-slider" role="region" aria-label="Slider de imagens">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="slide-content">
+                <h1>SLIDER – EXEMPLO 1</h1>
+                <p>Primeiro slide de exemplo com conteúdo demonstrativo.</p>
+              </div>
+            </li>
+            <li class="splide__slide">
+              <div class="slide-content">
+                <h1>SLIDER – EXEMPLO 2</h1>
+                <p>Segundo slide de exemplo com conteúdo demonstrativo.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

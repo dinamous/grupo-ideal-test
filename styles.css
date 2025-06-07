@@ -67,3 +67,27 @@ body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background
   opacity: 1; visibility: visible; transform: translateY(0);
 }
 .submenu-2 { right: 0; left: auto; }
+
+
+.slider-section {
+  background-color: #b8b8b8;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide-content {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+.slide-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+.slide-content p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
