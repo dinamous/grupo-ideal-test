@@ -1,35 +1,30 @@
-/* Estilos básicos, adicionaremos mais no próximo commit */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f9f9f9;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fff; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-.container {
-  max-width: 600px;
-  margin: 4rem auto;
-  padding: 2rem;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+.header {
+  background-color: #1a1a8a;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-
-.input-group {
+.header-content {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
 }
-
-input[type="text"] {
-  padding: 0.5rem;
-  font-size: 1rem;
+.logo-placeholder {
+  background-color: #1a1a8a;
+  border: 2px solid #fff;
+  padding: 15px 30px;
+  font-weight: bold;
+  font-size: 18px;
 }
-
-button {
-  padding: 0.5rem;
-  font-size: 1rem;
-  cursor: pointer;
+.contact-info {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
 }
