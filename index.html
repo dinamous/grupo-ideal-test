@@ -10,13 +10,30 @@
   <header class="header" role="banner">
     <div class="container header-content">
       <div class="logo">
-        <div class="logo-placeholder" aria-label="Logotipo da Empresa">IMAGEM</div>
+        <div class="logo-placeholder">IMAGEM</div>
       </div>
-      <div class="contact-info" aria-label="Telefones para contato">
-        <span aria-label="Telefone 1">11 1234-1234</span>
-        <span aria-label="Telefone 2">11 1234-1234</span>
+      <div class="contact-info">
+        <span>11 1234-1234</span> <span>11 1234-1234</span>
       </div>
     </div>
+    <nav class="main-nav" role="navigation">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#home" class="nav-link">HOME</a></li>
+        <li class="nav-item dropdown" aria-haspopup="true">
+          <a href="#empresa" class="nav-link dropdown-toggle" aria-expanded="false">EMPRESA</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#" role="menuitem">SUBMENU 1</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown" aria-haspopup="true">
+          <a href="#clientes" class="nav-link dropdown-toggle" aria-expanded="false">CLIENTES</a>
+          <ul class="dropdown-menu submenu-2" role="menu">
+            <li><a href="#" role="menuitem">SUBMENU 2</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="#contato" class="nav-link">CONTATO</a></li>
+      </ul>
+    </nav>
   </header>
 
   <script src="script.js"></script>
