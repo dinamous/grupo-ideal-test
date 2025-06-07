@@ -91,3 +91,23 @@ body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background
   max-width: 600px;
   margin: 0 auto;
 }
+
+
+.content-section {
+  padding: 60px 0;
+  background-color: #f8f8f8;
+}
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 40px;
+  align-items: start;
+}
+.content-text h2 {
+  color: #999;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+.evaluation-criteria h3 { color: #666; font-size: 1rem; margin-bottom: 15px; }
+.content-text p { color: #666; margin-bottom: 15px; font-size: 0.95rem; }
+.image-placeholder { background-color: #1a1a8a; color: #fff; padding: 80px 40px; }
