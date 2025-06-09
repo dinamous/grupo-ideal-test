@@ -260,7 +260,6 @@ list-style: none;
  }
  
  .evaluation-criteria ul {
-   list-style: none;
    margin-bottom: 25px;
  }
  
@@ -318,6 +317,12 @@ list-style: none;
  .feature-box {
    text-align: left;
  }
+
+ .feature-box  a{
+  text-decoration: none;  /* remove o sublinhado */
+  color: inherit;  
+ }
+
  
  .box-image {
    background-color: #1a1a8a;
@@ -327,8 +332,15 @@ list-style: none;
    font-size: 1.1rem;
    font-weight: bold;
    margin-bottom: 15px;
- }
- 
+  }
+  
+  .feature-box:hover .box-image{
+    background-color: #3232c1;
+  } 
+  .feature-box:hover p{
+    text-decoration: underline;
+  } 
+
  .feature-box p {
    color: #999;
    font-size: 0.9rem;
