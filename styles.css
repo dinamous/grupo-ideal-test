@@ -1,135 +1,498 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { font-size: 16px; scroll-behavior: smooth; }
-body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fff; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-.header {
-  background-color: #1a1a8a;
-  color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-}
-.logo-placeholder {
-  background-color: #1a1a8a;
-  border: 2px solid #fff;
-  padding: 15px 30px;
-  font-weight: bold;
-  font-size: 18px;
-}
-.contact-info {
-  display: flex;
-  gap: 20px;
-  font-size: 14px;
-}
-
-.main-nav {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.nav-list {
-  display: flex;
-  list-style: none;
-}
-.nav-item {
-  position: relative;
-}
-.nav-link {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  padding: 15px 20px;
-  font-size: 14px;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
-.nav-link:hover,
-.nav-link:focus {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.dropdown-menu {
-  position: absolute;
-  top: 100%; left: 0;
-  background-color: #1a1a8a;
-  list-style: none;
-  min-width: 200px;
-  opacity: 0; visibility: hidden;
-  transform: translateY(-10px);
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-.nav-item.dropdown:hover .dropdown-menu {
-  opacity: 1; visibility: visible; transform: translateY(0);
-}
-.submenu-2 { right: 0; left: auto; }
-
-
-.slider-section {
-  background-color: #b8b8b8;
-  min-height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.slide-content {
-  text-align: center;
-  padding: 60px 20px;
-  color: #666;
-}
-.slide-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  font-weight: normal;
-}
-.slide-content p {
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-
-.content-section {
-  padding: 60px 0;
-  background-color: #f8f8f8;
-}
-.content-grid {
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 40px;
-  align-items: start;
-}
-.content-text h2 {
-  color: #999;
-  font-size: 1.8rem;
-  margin-bottom: 30px;
-}
-.evaluation-criteria h3 { color: #666; font-size: 1rem; margin-bottom: 15px; }
-.content-text p { color: #666; margin-bottom: 15px; font-size: 0.95rem; }
-.image-placeholder { background-color: #1a1a8a; color: #fff; padding: 80px 40px; }
-
-
-.feature-boxes { padding: 60px 0; background-color: #fff; }
-.section-title { color: #999; font-size: 1.8rem; margin-bottom: 40px; }
-.boxes-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
-.box-image { background-color: #1a1a8a; color: #fff; padding: 60px 20px; text-align: center; }
-.feature-box p { color: #999; font-size: 0.9rem; line-height: 1.5; }
-
-
-.footer { background-color: #666; color: #fff; padding: 40px 0; }
-.footer-content { display: flex; justify-content: space-between; align-items: center; }
-.footer-nav-list { display: flex; list-style: none; gap: 30px; }
-.footer-nav-list a { color: #fff; text-decoration: none; font-size: 0.9rem; }
-
-@media screen and (max-width: 768px) {
-  .content-grid { grid-template-columns: 1fr; }
-  .boxes-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media screen and (max-width: 480px) {
-  .nav-list { flex-direction: column; }
-  .boxes-grid { grid-template-columns: 1fr; }
-}
+/* =====================================================
+   RESET E BASE STYLES
+   ===================================================== */
+   * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ 
+ html {
+   font-size: 16px;
+   scroll-behavior: smooth;
+ }
+ 
+ body {
+   font-family: Arial, sans-serif;
+   line-height: 1.6;
+   color: #333;
+   background-color: #fff;
+ }
+ 
+ /* =====================================================
+    CONTAINER GLOBAL
+    ===================================================== */
+ .container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 20px;
+ }
+ 
+ /* =====================================================
+    HEADER
+    ===================================================== */
+ .header {
+   background-color: #1a1a8a;
+   color: #fff;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+ }
+ 
+ .header-content {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 0;
+ }
+ 
+ .logo-placeholder {
+   background-color: #1a1a8a;
+   border: 2px solid #fff;
+   padding: 15px 30px;
+   font-weight: bold;
+   font-size: 18px;
+ }
+ 
+ .contact-info {
+   display: flex;
+   gap: 20px;
+   font-size: 14px;
+ }
+ 
+ /* =====================================================
+    NAVEGAÇÃO PRINCIPAL
+    ===================================================== */
+ .main-nav {
+   background-color: rgba(255, 255, 255, 0.1);
+ }
+ 
+ .nav-list {
+   display: flex;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+ }
+ 
+ .nav-item {
+   position: relative;
+ }
+ 
+ .nav-link {
+   display: block;
+   color: #fff;
+   text-decoration: none;
+   padding: 15px 20px;
+   font-size: 14px;
+   font-weight: 500;
+   transition: background-color 0.3s ease;
+ }
+ 
+ .nav-link:hover,
+ .nav-link:focus {
+   background-color: rgba(255, 255, 255, 0.1);
+   outline: none;
+ }
+ 
+ /* DROPDOWN (DESKTOP) */
+ .dropdown-menu {
+   position: absolute;
+   top: 100%;
+   left: 0;
+   background-color: #1a1a8a;
+   list-style: none;
+   min-width: 200px;
+   opacity: 0;
+   visibility: hidden;
+   transform: translateY(-10px);
+   transition: all 0.3s ease;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   z-index: 1000;
+ }
+ 
+ .nav-item.dropdown:hover .dropdown-menu,
+ .nav-item.dropdown:focus-within .dropdown-menu {
+   opacity: 1;
+   visibility: visible;
+   transform: translateY(0);
+ }
+ 
+ .dropdown-menu a {
+   display: block;
+   padding: 12px 20px;
+   color: #fff;
+   text-decoration: none;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+   font-size: 14px;
+ }
+ 
+ .dropdown-menu a:hover,
+ .dropdown-menu a:focus {
+   background-color: rgba(255, 255, 255, 0.2);
+   outline: none;
+ }
+ 
+ /* Submenu 2 (abre para a direita) */
+ .submenu-2 {
+   left: auto;
+   right: 0;
+ }
+ 
+ /* =====================================================
+    SLIDER SECTION
+    ===================================================== */
+ .slider-section {
+   background-color: #b8b8b8;
+   min-height: 400px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+ 
+ .splide {
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+ }
+ 
+ .slide-content {
+   text-align: center;
+   padding: 60px 20px;
+   color: #666;
+ }
+ 
+ .slide-content h1 {
+   font-size: 2.5rem;
+   margin-bottom: 20px;
+   font-weight: normal;
+ }
+ 
+ .slide-content p {
+   font-size: 1.1rem;
+   max-width: 600px;
+   margin: 0 auto;
+ }
+ 
+ /* =====================================================
+    CONTENT SECTION
+    ===================================================== */
+ .content-section {
+   padding: 60px 0;
+   background-color: #f8f8f8;
+ }
+ 
+ .content-grid {
+   display: grid;
+   grid-template-columns: 1fr 300px;
+   gap: 40px;
+   align-items: start;
+ }
+ 
+ .content-text h2 {
+   color: #999;
+   font-size: 1.8rem;
+   margin-bottom: 30px;
+   font-weight: normal;
+ }
+ 
+ .evaluation-criteria h3 {
+   color: #666;
+   font-size: 1rem;
+   margin-bottom: 15px;
+   font-weight: normal;
+ }
+ 
+ .evaluation-criteria ul {
+   list-style: none;
+   margin-bottom: 25px;
+ }
+ 
+ .evaluation-criteria li {
+   color: #666;
+   margin-bottom: 8px;
+   font-size: 0.95rem;
+ }
+ 
+ .content-text p {
+   color: #666;
+   margin-bottom: 15px;
+   font-size: 0.95rem;
+   line-height: 1.6;
+ }
+ 
+ /* Box de imagem lateral */
+ .content-image {
+   display: flex;
+   justify-content: center;
+ }
+ 
+ .image-placeholder {
+   background-color: #1a1a8a;
+   color: #fff;
+   padding: 80px 40px;
+   text-align: center;
+   font-size: 1.2rem;
+   font-weight: bold;
+   width: 100%;
+   max-width: 300px;
+ }
+ 
+ /* =====================================================
+    FEATURE BOXES SECTION
+    ===================================================== */
+ .feature-boxes {
+   padding: 60px 0;
+   background-color: #fff;
+ }
+ 
+ .section-title {
+   color: #999;
+   font-size: 1.8rem;
+   margin-bottom: 40px;
+   font-weight: normal;
+ }
+ 
+ .boxes-grid {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 30px;
+ }
+ 
+ .feature-box {
+   text-align: left;
+ }
+ 
+ .box-image {
+   background-color: #1a1a8a;
+   color: #fff;
+   padding: 60px 20px;
+   text-align: center;
+   font-size: 1.1rem;
+   font-weight: bold;
+   margin-bottom: 15px;
+ }
+ 
+ .feature-box p {
+   color: #999;
+   font-size: 0.9rem;
+   line-height: 1.5;
+ }
+ 
+ /* =====================================================
+    FOOTER
+    ===================================================== */
+ .footer {
+   background-color: #666;
+   color: #fff;
+   padding: 40px 0;
+ }
+ 
+ .footer-content {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ 
+ .footer-nav-list {
+   display: flex;
+   list-style: none;
+   gap: 30px;
+ }
+ 
+ .footer-nav-list a {
+   color: #fff;
+   text-decoration: none;
+   font-size: 0.9rem;
+   transition: opacity 0.3s ease;
+ }
+ 
+ .footer-nav-list a:hover,
+ .footer-nav-list a:focus {
+   opacity: 0.8;
+   outline: none;
+ }
+ 
+ .footer-brand {
+   font-size: 1.1rem;
+   font-weight: bold;
+ }
+ 
+ /* =====================================================
+    MEDIA QUERIES – TABLET (<= 768px)
+    ===================================================== */
+ @media screen and (max-width: 768px) {
+   .container {
+     padding: 0 15px;
+   }
+ 
+   .header-content {
+     flex-direction: column;
+     gap: 15px;
+     text-align: center;
+   }
+ 
+   .contact-info {
+     justify-content: center;
+   }
+ 
+   .nav-list {
+     flex-wrap: wrap;
+     justify-content: center;
+   }
+ 
+   .nav-link {
+     padding: 12px 15px;
+     font-size: 13px;
+   }
+ 
+   .content-grid {
+     grid-template-columns: 1fr;
+     gap: 30px;
+   }
+ 
+   /* Garantir que a imagem fique acima no mobile/tablet */
+   .content-image {
+     order: -1;
+   }
+ 
+   .boxes-grid {
+     grid-template-columns: repeat(2, 1fr);
+     gap: 20px;
+   }
+ 
+   .slide-content h1 {
+     font-size: 2rem;
+   }
+ 
+   .footer-content {
+     flex-direction: column;
+     gap: 20px;
+     text-align: center;
+   }
+ 
+   .footer-nav-list {
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 20px;
+   }
+ }
+ 
+ /* =====================================================
+    MEDIA QUERIES – MOBILE (<= 480px)
+    ===================================================== */
+ @media screen and (max-width: 480px) {
+   .logo-placeholder {
+     padding: 12px 20px;
+     font-size: 16px;
+   }
+ 
+   .contact-info {
+     flex-direction: column;
+     gap: 5px;
+     font-size: 13px;
+   }
+ 
+   .nav-list {
+     flex-direction: column;
+   }
+ 
+   .nav-link {
+     text-align: center;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+   }
+ 
+   /* Tornar dropdowns sempre visíveis em mobile (clicável) */
+   .dropdown-menu {
+     position: static;
+     opacity: 1;
+     visibility: visible;
+     transform: none;
+     box-shadow: none;
+     background-color: rgba(255, 255, 255, 0.1);
+   }
+ 
+   .slide-content {
+     padding: 40px 15px;
+   }
+ 
+   .slide-content h1 {
+     font-size: 1.5rem;
+   }
+ 
+   .slide-content p {
+     font-size: 1rem;
+   }
+ 
+   .content-section {
+     padding: 40px 0;
+   }
+ 
+   .feature-boxes {
+     padding: 40px 0;
+   }
+ 
+   .boxes-grid {
+     grid-template-columns: 1fr;
+   }
+ 
+   .box-image {
+     padding: 40px 20px;
+   }
+ 
+   .image-placeholder {
+     padding: 60px 30px;
+   }
+ }
+ 
+ /* =====================================================
+    ACESSIBILIDADE (PREFER-REDUCED-MOTION, FOCUS, HIGH CONTRAST)
+    ===================================================== */
+ /* Prefers-Reduced-Motion */
+ @media (prefers-reduced-motion: reduce) {
+   * {
+     animation-duration: 0.01ms !important;
+     animation-iteration-count: 1 !important;
+     transition-duration: 0.01ms !important;
+   }
+ 
+   html {
+     scroll-behavior: auto;
+   }
+ }
+ 
+ /* Foco em links e botões (outline) */
+ a:focus,
+ button:focus {
+   outline: 2px solid #1a1a8a;
+   outline-offset: 2px;
+ }
+ 
+ /* High Contrast */
+ @media (prefers-contrast: high) {
+   .header {
+     border-bottom: 2px solid #fff;
+   }
+ 
+   .dropdown-menu {
+     border: 1px solid #fff;
+   }
+ }
+ 
+ /* PRINT STYLES */
+ @media print {
+   .header,
+   .footer,
+   .slider-section {
+     display: none;
+   }
+ 
+   .content-section {
+     background: #fff;
+   }
+ 
+   * {
+     color: #000 !important;
+     background: #fff !important;
+   }
+ }
