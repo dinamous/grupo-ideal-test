@@ -357,6 +357,7 @@
   
   .feature-box {
     text-align: left;
+    cursor: pointer;
   }
   
   .feature-box a {
@@ -415,6 +416,7 @@
     text-decoration: none;
     font-size: 0.9rem;
     transition: opacity 0.3s ease;
+    cursor: pointer;
   }
   
   .footer-nav-list a:hover,
