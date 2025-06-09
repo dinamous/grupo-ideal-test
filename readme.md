@@ -9,6 +9,18 @@ Este projeto é um teste técnico desenvolvido com HTML, CSS e JavaScript puros,
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat&logo=javascript&logoColor=black)
 ![Responsivo](https://img.shields.io/badge/Design-Responsivo-brightgreen)
 
+---
+
+## 🖼️ Preview do Projeto
+
+### 💻 Site Finalizado
+<img src="./src/screenshot.png" alt="Preview do site finalizado" width="100%" />
+
+### 🔍 Resultado do Google Lighthouse
+<img src="./src/lighthouse.png" alt="Resultado do Lighthouse com notas de performance" width="100%" />
+
+---
+
 ## 🧪 Descrição do Teste
 
 > "Recriar layout com HTML, CSS e JS puros. Avaliação de organização de código, detalhamento e tempo de entrega."
