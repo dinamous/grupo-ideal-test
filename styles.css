@@ -151,6 +151,49 @@
    left: auto;
    right: 0;
  }
+
+ .has-submenu {
+  position: relative;
+}
+
+/* Submenu (abre para a direita) */
+.dropdown-submenu {
+list-style: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #1a1a8a;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* Mostrar submenu ao passar o mouse */
+.has-submenu:hover .dropdown-submenu,
+.has-submenu:focus-within .dropdown-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Estilo dos links no submenu */
+.dropdown-submenu a {
+  padding: 12px 20px;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: block;
+  font-size: 14px;
+}
+
+.dropdown-submenu a:hover,
+.dropdown-submenu a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
  
  /* =====================================================
     SLIDER SECTION
