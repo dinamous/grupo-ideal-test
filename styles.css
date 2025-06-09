@@ -258,10 +258,12 @@ list-style: none;
  
  .content-grid {
    display: grid;
-   grid-template-columns: 1fr 300px;
+   grid-template-columns: 1fr 600px;
    gap: 40px;
    align-items: start;
+
  }
+
  
  .content-text h2 {
    color: #999;
@@ -303,12 +305,12 @@ list-style: none;
  .image-placeholder {
    background-color: #1a1a8a;
    color: #fff;
-   padding: 80px 40px;
+   padding: 150px 40px;
    text-align: center;
    font-size: 1.2rem;
    font-weight: bold;
    width: 100%;
-   max-width: 300px;
+   max-width: 450px;
  }
  
  /* =====================================================
@@ -345,7 +347,7 @@ list-style: none;
  .box-image {
    background-color: #1a1a8a;
    color: #fff;
-   padding: 60px 20px;
+   padding: 90px 20px;
    text-align: center;
    font-size: 1.1rem;
    font-weight: bold;
