@@ -1,207 +1,226 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <!-- Meta Básicas e SEO -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Teste Front-end: recriar layout com HTML, CSS e JS puros. Organização de código, responsividade e boas práticas.">
-  <meta name="keywords" content="HTML, CSS, JavaScript, desenvolvimento web, teste técnico, responsivo, semântica">
-  <meta name="author" content="Seu Nome Aqui">
+  <head>
+    <!-- Meta Básicas e SEO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Teste Front-end: recriar layout com HTML, CSS e JS puros. Organização de código, responsividade e boas práticas."
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, desenvolvimento web, teste técnico, responsivo, semântica"
+    />
+    <meta name="author" content="Matheus Simoes" />
 
-  <!-- Open Graph / Twitter Cards (Exemplo) -->
-  <meta property="og:title" content="Teste de HTML e CSS">
-  <meta property="og:description" content="Demonstração de habilidades em desenvolvimento web com HTML, CSS e JavaScript puros.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
+    <!-- Open Graph / Twitter Cards -->
+    <meta property="og:title" content="Teste de HTML e CSS" />
+    <meta
+      property="og:description"
+      content="Demonstração de habilidades em desenvolvimento web com HTML, CSS e JavaScript puros."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-  <title>Teste de HTML e CSS</title>
+    <title>Teste de HTML e CSS</title>
 
-  <!-- Splide CSS (CDN) -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
-  >
-  <!-- Nosso CSS -->
-  <link rel="stylesheet" href="styles.css">
-</head>
+    <!-- Splide CSS (CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
-  <!-- ========== HEADER ========== -->
-  <header class="header" role="banner">
-    <div class="container header-content">
+  <body>
+    <!-- ========== HEADER ========== -->
+    <header class="header" role="banner">
+      <div class="container-blue">
+        <div class="container flex flex-end">
+          <!-- Contato -->
+          <div class="contact-info" aria-label="Telefones para contato">
+            <span aria-label="Telefone 1">11 1234-1234</span>
+            <span aria-label="Telefone 2">11 1234-1234</span>
+          </div>
+        </div>
+      </div>
+
       <!-- Logo (Placeholder) -->
-      <div class="logo">
+      <!-- <div class="logo">
         <div class="logo-placeholder" aria-label="Logotipo da Empresa">IMAGEM</div>
-      </div>
+      </div> -->
 
-      <!-- Contato -->
-      <div class="contact-info" aria-label="Telefones para contato">
-        <span aria-label="Telefone 1">11 1234-1234</span>
-        <span aria-label="Telefone 2">11 1234-1234</span>
-      </div>
-    </div>
-
-    <!-- Navegação Principal -->
-    <nav class="main-nav" role="navigation" aria-label="Menu principal">
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a href="#home" class="nav-link" aria-current="page">HOME</a>
-        </li>
-
-        <!-- Dropdown EMPRESA -->
-        <li class="nav-item dropdown" aria-haspopup="true">
-          <a
-            href="#empresa"
-            class="nav-link dropdown-toggle"
-            aria-expanded="false"
-            >EMPRESA</a
-          >
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#submenu1" role="menuitem">SUBMENU 1</a></li>
-            <li><a href="#submenu1" role="menuitem">SUBMENU 1</a></li>
-            <li><a href="#submenu1" role="menuitem">SUBMENU 1</a></li>
-            <li><a href="#submenu1" role="menuitem">SUBMENU 1</a></li>
-          </ul>
-        </li>
-
-        <!-- Dropdown CLIENTES -->
-        <li class="nav-item dropdown" aria-haspopup="true">
-          <a
-            href="#clientes"
-            class="nav-link dropdown-toggle"
-            aria-expanded="false"
-            >CLIENTES</a
-          >
-          <ul class="dropdown-menu submenu-2" role="menu">
-            <li><a href="#submenu2" role="menuitem">SUBMENU 2</a></li>
-            <li><a href="#submenu2" role="menuitem">SUBMENU 2</a></li>
-            <li><a href="#submenu2" role="menuitem">SUBMENU 2</a></li>
-            <li><a href="#submenu2" role="menuitem">SUBMENU 2</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item">
-          <a href="#contato" class="nav-link">CONTATO</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- ========== MAIN CONTENT ========== -->
-  <main class="main-content" role="main">
-    <!-- ===== Slider Section ===== -->
-    <section class="slider-section" aria-label="Banner principal" id="home">
-      <div class="splide" id="main-slider" role="region" aria-label="Slider de imagens">
-        <div class="splide__track">
-          <ul class="splide__list">
-            <!-- Slide 1 -->
-            <li class="splide__slide">
-              <div class="slide-content">
-                <h1>SLIDER – EXEMPLO 1</h1>
-                <p>Primeiro slide de exemplo com conteúdo demonstrativo.</p>
-              </div>
+      <div class="container-white">
+        <!-- Navegação Principal -->
+        <nav class="container" role="navigation" aria-label="Menu principal">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#home" class="nav-link" aria-current="page">HOME</a>
             </li>
-            <!-- Slide 2 -->
-            <li class="splide__slide">
-              <div class="slide-content">
-                <h1>SLIDER – EXEMPLO 2</h1>
-                <p>Segundo slide de exemplo com conteúdo demonstrativo.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
 
-    <!-- ===== Content Section ===== -->
-    <section class="content-section" aria-labelledby="conteudo-titulo">
-      <div class="container">
-        <div class="content-grid">
-          <!-- Artigo com texto -->
-          <article class="content-text" id="conteudo-titulo">
-            <h2>TESTE DE HTML E CSS</h2>
-
-            <div class="evaluation-criteria">
-              <h3>Quesitos de avaliação:</h3>
-              <ul>
-                <li>Organização do código (quanto mais limpo, melhor);</li>
-                <li>Nível de detalhismo (quanto mais idêntico, melhor);</li>
-                <li>Tempo de desenvolvimento (seja sincero ao informar o tempo gasto).</li>
+            <!-- Dropdown EMPRESA -->
+            <li class="nav-item dropdown" aria-haspopup="true">
+              <a
+                href="#empresa"
+                class="nav-link dropdown-toggle"
+                aria-expanded="false"
+                >EMPRESA</a
+              >
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#submenu1" role="menuitem">SUBMENU 1</a></li>
+                <li><a href="#submenu1" role="menuitem">SUBMENU 1</a></li>
+                <li><a href="#submenu1" role="menuitem">SUBMENU 1</a></li>
+                <li><a href="#submenu1" role="menuitem">SUBMENU 1</a></li>
               </ul>
-            </div>
+            </li>
 
-            <p>
-              Ao finalizar o teste, envie zipado o código para o e-mail com o tempo
-              gasto e seu currículo anexado.
-            </p>
-            <p><strong>Obrigado e boa sorte!</strong></p>
-          </article>
+            <!-- Dropdown CLIENTES -->
+            <li class="nav-item dropdown" aria-haspopup="true">
+              <a
+                href="#clientes"
+                class="nav-link dropdown-toggle"
+                aria-expanded="false"
+                >CLIENTES</a
+              >
+              <ul class="dropdown-menu submenu-2" role="menu">
+                <li><a href="#submenu2" role="menuitem">SUBMENU 2</a></li>
+                <li><a href="#submenu2" role="menuitem">SUBMENU 2</a></li>
+                <li><a href="#submenu2" role="menuitem">SUBMENU 2</a></li>
+                <li><a href="#submenu2" role="menuitem">SUBMENU 2</a></li>
+              </ul>
+            </li>
 
-          <!-- Box lateral com imagem (placeholder) -->
-          <aside class="content-image" aria-label="Imagem ilustrativa">
-            <div class="image-placeholder" aria-hidden="true">IMAGEM</div>
-          </aside>
+            <li class="nav-item">
+              <a href="#contato" class="nav-link">CONTATO</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="main-content" role="main">
+      <!-- ===== Slider Section ===== -->
+      <section class="slider-section" aria-label="Banner principal" id="home">
+        <div
+          class="splide"
+          id="main-slider"
+          role="region"
+          aria-label="Slider de imagens"
+        >
+          <div class="splide__track">
+            <ul class="splide__list">
+              <!-- Slide 1 -->
+              <li class="splide__slide">
+                <div class="slide-content">
+                  <h1>SLIDER – EXEMPLO 1</h1>
+                  <p>Primeiro slide de exemplo com conteúdo demonstrativo.</p>
+                </div>
+              </li>
+              <!-- Slide 2 -->
+              <li class="splide__slide">
+                <div class="slide-content">
+                  <h1>SLIDER – EXEMPLO 2</h1>
+                  <p>Segundo slide de exemplo com conteúdo demonstrativo.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Content Section ===== -->
+      <section class="content-section" aria-labelledby="conteudo-titulo">
+        <div class="container">
+          <div class="content-grid">
+            <!-- Artigo com texto -->
+            <article class="content-text" id="conteudo-titulo">
+              <h2>TESTE DE HTML E CSS</h2>
+
+              <div class="evaluation-criteria">
+                <h3>Quesitos de avaliação:</h3>
+                <ul>
+                  <li>Organização do código (quanto mais limpo, melhor);</li>
+                  <li>Nível de detalhismo (quanto mais idêntico, melhor);</li>
+                  <li>
+                    Tempo de desenvolvimento (seja sincero ao informar o tempo
+                    gasto).
+                  </li>
+                </ul>
+              </div>
+
+              <p>
+                Ao finalizar o teste, envie zipado o código para o e-mail com o
+                tempo gasto e seu currículo anexado.
+              </p>
+              <p><strong>Obrigado e boa sorte!</strong></p>
+            </article>
+
+            <!-- Box lateral com imagem (placeholder) -->
+            <aside class="content-image" aria-label="Imagem ilustrativa">
+              <div class="image-placeholder" aria-hidden="true">IMAGEM</div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Feature Boxes Section ===== -->
+      <section class="feature-boxes" aria-labelledby="destaques-titulo">
+        <div class="container">
+          <h2 class="section-title" id="destaques-titulo">BOXES DE DESTAQUE</h2>
+
+          <div class="boxes-grid">
+            <!-- Box 1 -->
+            <article class="feature-box">
+              <div class="box-image" aria-hidden="true">IMAGEM</div>
+              <p>Um texto descritivo com link apenas.</p>
+            </article>
+
+            <!-- Box 2 -->
+            <article class="feature-box">
+              <div class="box-image" aria-hidden="true">IMAGEM</div>
+              <p>Um texto descritivo com link apenas.</p>
+            </article>
+
+            <!-- Box 3 -->
+            <article class="feature-box">
+              <div class="box-image" aria-hidden="true">IMAGEM</div>
+              <p>Um texto descritivo com link apenas.</p>
+            </article>
+
+            <!-- Box 4 -->
+            <article class="feature-box">
+              <div class="box-image" aria-hidden="true">IMAGEM</div>
+              <p>Um texto descritivo com link apenas.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" role="contentinfo">
+      <div class="container footer-content">
+        <!-- Navegação de rodapé -->
+        <nav class="footer-nav" role="navigation" aria-label="Menu do rodapé">
+          <ul class="footer-nav-list">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#empresa">EMPRESA</a></li>
+            <li><a href="#clientes">CLIENTES</a></li>
+            <li><a href="#contato">CONTATO</a></li>
+          </ul>
+        </nav>
+
+        <!-- Texto do rodapé -->
+        <div class="footer-brand">
+          <span aria-hidden="true">RODAPE</span>
         </div>
       </div>
-    </section>
+    </footer>
 
-    <!-- ===== Feature Boxes Section ===== -->
-    <section class="feature-boxes" aria-labelledby="destaques-titulo">
-      <div class="container">
-        <h2 class="section-title" id="destaques-titulo">BOXES DE DESTAQUE</h2>
-
-        <div class="boxes-grid">
-          <!-- Box 1 -->
-          <article class="feature-box">
-            <div class="box-image" aria-hidden="true">IMAGEM</div>
-            <p>Um texto descritivo com link apenas.</p>
-          </article>
-
-          <!-- Box 2 -->
-          <article class="feature-box">
-            <div class="box-image" aria-hidden="true">IMAGEM</div>
-            <p>Um texto descritivo com link apenas.</p>
-          </article>
-
-          <!-- Box 3 -->
-          <article class="feature-box">
-            <div class="box-image" aria-hidden="true">IMAGEM</div>
-            <p>Um texto descritivo com link apenas.</p>
-          </article>
-
-          <!-- Box 4 -->
-          <article class="feature-box">
-            <div class="box-image" aria-hidden="true">IMAGEM</div>
-            <p>Um texto descritivo com link apenas.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer" role="contentinfo">
-    <div class="container footer-content">
-      <!-- Navegação de rodapé -->
-      <nav class="footer-nav" role="navigation" aria-label="Menu do rodapé">
-        <ul class="footer-nav-list">
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#empresa">EMPRESA</a></li>
-          <li><a href="#clientes">CLIENTES</a></li>
-          <li><a href="#contato">CONTATO</a></li>
-        </ul>
-      </nav>
-
-      <!-- Texto do rodapé -->
-      <div class="footer-brand">
-        <span aria-hidden="true">RODAPE</span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Splide JS (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-  <!-- Nosso script -->
-  <script src="script.js"></script>
-</body>
+    <!-- Splide JS (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

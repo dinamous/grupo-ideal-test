@@ -28,13 +28,27 @@
    margin: 0 auto;
    padding: 0 20px;
  }
+
+ .flex{
+  display: flex;
+ }
+
+ .flex-end {
+  justify-content: flex-end;
+ }
  
  /* =====================================================
     HEADER
     ===================================================== */
+
+  .container-blue{
+    background-color: #1a1a8a;
+  }
+  .container-white{
+    background-color: #fff;
+  }
+
  .header {
-   background-color: #1a1a8a;
-   color: #fff;
    position: sticky;
    top: 0;
    z-index: 1000;
@@ -42,7 +56,7 @@
  
  .header-content {
    display: flex;
-   justify-content: space-between;
+   justify-content: flex-end;
    align-items: center;
    padding: 10px 0;
  }
@@ -56,20 +70,19 @@
  }
  
  .contact-info {
-   display: flex;
-   gap: 20px;
+   color: #fff;
    font-size: 14px;
  }
  
  /* =====================================================
     NAVEGAÇÃO PRINCIPAL
     ===================================================== */
- .main-nav {
-   background-color: rgba(255, 255, 255, 0.1);
- }
  
  .nav-list {
+  background-color: #fff;
+    color: #1a1a8a;
    display: flex;
+   justify-content: flex-end;
    list-style: none;
    margin: 0;
    padding: 0;
@@ -81,7 +94,7 @@
  
  .nav-link {
    display: block;
-   color: #fff;
+   color: #666;
    text-decoration: none;
    padding: 15px 20px;
    font-size: 14px;
