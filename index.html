@@ -20,35 +20,63 @@
   >
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header class="header" role="banner">
     <div class="container header-content">
       <div class="logo">
-        <div class="logo-placeholder">IMAGEM</div>
+        <div class="logo-placeholder" aria-label="Logotipo da Empresa">IMAGEM</div>
       </div>
-      <div class="contact-info">
-        <span>11 1234-1234</span> <span>11 1234-1234</span>
+
+      <div class="contact-info" aria-label="Telefones para contato">
+        <span aria-label="Telefone 1">11 1234-1234</span>
+        <span aria-label="Telefone 2">11 1234-1234</span>
       </div>
     </div>
+
     <nav class="main-nav" role="navigation" aria-label="Menu principal">
       <ul class="nav-list">
-        <li class="nav-item"><a href="#home" class="nav-link">HOME</a></li>
+        <li class="nav-item">
+          <a href="#home" class="nav-link" aria-current="page">HOME</a>
+        </li>
+
         <li class="nav-item dropdown" aria-haspopup="true">
-          <a href="#empresa" class="nav-link dropdown-toggle" aria-expanded="false">EMPRESA</a>
+          <a
+            href="#empresa"
+            class="nav-link dropdown-toggle"
+            aria-expanded="false"
+            >EMPRESA</a
+          >
           <ul class="dropdown-menu" role="menu">
+            <li><a href="#submenu1" role="menuitem">SUBMENU 1</a></li>
+            <li><a href="#submenu1" role="menuitem">SUBMENU 1</a></li>
+            <li><a href="#submenu1" role="menuitem">SUBMENU 1</a></li>
             <li><a href="#submenu1" role="menuitem">SUBMENU 1</a></li>
           </ul>
         </li>
+
         <li class="nav-item dropdown" aria-haspopup="true">
-          <a href="#clientes" class="nav-link dropdown-toggle" aria-expanded="false">CLIENTES</a>
+          <a
+            href="#clientes"
+            class="nav-link dropdown-toggle"
+            aria-expanded="false"
+            >CLIENTES</a
+          >
           <ul class="dropdown-menu submenu-2" role="menu">
+            <li><a href="#submenu2" role="menuitem">SUBMENU 2</a></li>
+            <li><a href="#submenu2" role="menuitem">SUBMENU 2</a></li>
+            <li><a href="#submenu2" role="menuitem">SUBMENU 2</a></li>
             <li><a href="#submenu2" role="menuitem">SUBMENU 2</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a href="#contato" class="nav-link">CONTATO</a></li>
+
+        <li class="nav-item">
+          <a href="#contato" class="nav-link">CONTATO</a>
+        </li>
       </ul>
     </nav>
   </header>
+
   <main class="main-content" role="main">
     <section class="slider-section" aria-label="Banner principal" id="home">
       <div class="splide" id="main-slider" role="region" aria-label="Slider de imagens">
@@ -70,11 +98,13 @@
         </div>
       </div>
     </section>
+
     <section class="content-section" aria-labelledby="conteudo-titulo">
       <div class="container">
         <div class="content-grid">
           <article class="content-text" id="conteudo-titulo">
             <h2>TESTE DE HTML E CSS</h2>
+
             <div class="evaluation-criteria">
               <h3>Quesitos de avaliação:</h3>
               <ul>
@@ -83,9 +113,14 @@
                 <li>Tempo de desenvolvimento (seja sincero ao informar o tempo gasto).</li>
               </ul>
             </div>
-            <p>Ao finalizar o teste, envie zipado o código ...</p>
+
+            <p>
+              Ao finalizar o teste, envie zipado o código para o e-mail com o tempo
+              gasto e seu currículo anexado.
+            </p>
             <p><strong>Obrigado e boa sorte!</strong></p>
           </article>
+
           <aside class="content-image" aria-label="Imagem ilustrativa">
             <div class="image-placeholder" aria-hidden="true">IMAGEM</div>
           </aside>
@@ -96,18 +131,35 @@
     <section class="feature-boxes" aria-labelledby="destaques-titulo">
       <div class="container">
         <h2 class="section-title" id="destaques-titulo">BOXES DE DESTAQUE</h2>
+
         <div class="boxes-grid">
-          <article class="feature-box"><div class="box-image">IMAGEM</div><p>Um texto descritivo com link apenas.</p></article>
-          <article class="feature-box"><div class="box-image">IMAGEM</div><p>Um texto descritivo com link apenas.</p></article>
-          <article class="feature-box"><div class="box-image">IMAGEM</div><p>Um texto descritivo com link apenas.</p></article>
-          <article class="feature-box"><div class="box-image">IMAGEM</div><p>Um texto descritivo com link apenas.</p></article>
+          <article class="feature-box">
+            <div class="box-image" aria-hidden="true">IMAGEM</div>
+            <p>Um texto descritivo com link apenas.</p>
+          </article>
+
+          <article class="feature-box">
+            <div class="box-image" aria-hidden="true">IMAGEM</div>
+            <p>Um texto descritivo com link apenas.</p>
+          </article>
+
+          <article class="feature-box">
+            <div class="box-image" aria-hidden="true">IMAGEM</div>
+            <p>Um texto descritivo com link apenas.</p>
+          </article>
+
+          <article class="feature-box">
+            <div class="box-image" aria-hidden="true">IMAGEM</div>
+            <p>Um texto descritivo com link apenas.</p>
+          </article>
         </div>
       </div>
     </section>
   </main>
+
   <footer class="footer" role="contentinfo">
     <div class="container footer-content">
-      <nav class="footer-nav" aria-label="Menu do rodapé">
+      <nav class="footer-nav" role="navigation" aria-label="Menu do rodapé">
         <ul class="footer-nav-list">
           <li><a href="#home">HOME</a></li>
           <li><a href="#empresa">EMPRESA</a></li>
@@ -115,7 +167,10 @@
           <li><a href="#contato">CONTATO</a></li>
         </ul>
       </nav>
-      <div class="footer-brand"><span aria-hidden="true">RODAPE</span></div>
+
+      <div class="footer-brand">
+        <span aria-hidden="true">RODAPE</span>
+      </div>
     </div>
   </footer>
 
