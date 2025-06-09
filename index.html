@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <!-- Meta Básicas e SEO -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -14,7 +13,6 @@
     />
     <meta name="author" content="Matheus Simoes" />
 
-    <!-- Open Graph / Twitter Cards -->
     <meta property="og:title" content="Teste de HTML e CSS" />
     <meta
       property="og:description"
@@ -25,7 +23,6 @@
 
     <title>Teste de HTML e CSS</title>
 
-    <!-- Splide CSS (CDN) -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
@@ -34,11 +31,9 @@
   </head>
 
   <body>
-    <!-- ========== HEADER ========== -->
     <header class="header" role="banner">
       <div class="container-blue">
         <div class="container flex flex-end">
-          <!-- Contato -->
           <div class="contact-info" aria-label="Telefones para contato">
             <span aria-label="Telefone 1">11 1234-1234</span>
             <span aria-label="Telefone 2">11 1234-1234</span>
@@ -46,23 +41,23 @@
         </div>
       </div>
 
-      
-
       <div class="container-white">
-        <!-- Navegação Principal -->
         <nav class="container flex flex-between flex-base" role="navigation" aria-label="Menu principal">
+          <div class="logo">
+            <div class="logo-placeholder flex flex-center" aria-label="Logotipo da Empresa">IMAGEM</div>
+          </div>
 
-                <!-- Logo (Placeholder) -->
-            <div class="logo">
-              <div class="logo-placeholder flex flex-center" aria-label="Logotipo da Empresa">IMAGEM</div>
-            </div>
+          <button class="hamburger" aria-label="Abrir menu" aria-controls="main-nav" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
 
-          <ul class="nav-list">
+          <ul class="nav-list" id="main-nav">
             <li class="nav-item">
               <a href="#home" class="nav-link" aria-current="page">HOME</a>
             </li>
 
-            <!-- Dropdown EMPRESA -->
             <li class="nav-item dropdown" aria-haspopup="true">
               <a href="#empresa" class="nav-link dropdown-toggle" aria-expanded="false">EMPRESA</a>
               <ul class="dropdown-menu" role="menu">
@@ -80,7 +75,6 @@
               </ul>
             </li>
 
-            <!-- Dropdown CLIENTES -->
             <li class="nav-item dropdown" aria-haspopup="true">
               <a
                 href="#clientes"
@@ -88,7 +82,6 @@
                 aria-expanded="false"
                 >CLIENTES</a
               >
-              
             </li>
 
             <li class="nav-item">
@@ -99,9 +92,7 @@
       </div>
     </header>
 
-    <!-- ========== MAIN CONTENT ========== -->
     <main class="main-content" role="main">
-      <!-- ===== Slider Section ===== -->
       <section class="slider-section" aria-label="Banner principal" id="home">
         <div
           class="splide"
@@ -111,14 +102,12 @@
         >
           <div class="splide__track">
             <ul class="splide__list">
-              <!-- Slide 1 -->
               <li class="splide__slide">
                 <div class="slide-content">
                   <h1>SLIDER – EXEMPLO 1</h1>
                   <p>Primeiro slide de exemplo com conteúdo demonstrativo.</p>
                 </div>
               </li>
-              <!-- Slide 2 -->
               <li class="splide__slide">
                 <div class="slide-content">
                   <h1>SLIDER – EXEMPLO 2</h1>
@@ -130,11 +119,9 @@
         </div>
       </section>
 
-      <!-- ===== Content Section ===== -->
       <section class="content-section" aria-labelledby="conteudo-titulo">
         <div class="container">
           <div class="content-grid">
-            <!-- Artigo com texto -->
             <article class="content-text" id="conteudo-titulo">
               <h2>TESTE DE HTML E CSS</h2>
 
@@ -157,7 +144,6 @@
               <p><strong>Obrigado e boa sorte!</strong></p>
             </article>
 
-            <!-- Box lateral com imagem (placeholder) -->
             <aside class="content-image" aria-label="Imagem ilustrativa">
               <div class="image-placeholder" aria-hidden="true">IMAGEM</div>
             </aside>
@@ -165,31 +151,26 @@
         </div>
       </section>
 
-      <!-- ===== Feature Boxes Section ===== -->
       <section class="feature-boxes" aria-labelledby="destaques-titulo">
         <div class="container">
           <h2 class="section-title" id="destaques-titulo">BOXES DE DESTAQUE</h2>
 
           <div class="boxes-grid">
-            <!-- Box 1 -->
             <article class="feature-box">
               <div class="box-image" aria-hidden="true">IMAGEM</div>
               <p><a href="#"> Um texto descritivo com link apenas. </a></p>
             </article>
 
-            <!-- Box 2 -->
             <article class="feature-box">
               <div class="box-image" aria-hidden="true">IMAGEM</div>
               <p><a href="#"> Um texto descritivo com link apenas. </a></p>
             </article>
 
-            <!-- Box 3 -->
             <article class="feature-box">
               <div class="box-image" aria-hidden="true">IMAGEM</div>
               <p><a href="#"> Um texto descritivo com link apenas. </a></p>
             </article>
 
-            <!-- Box 4 -->
             <article class="feature-box">
               <div class="box-image" aria-hidden="true">IMAGEM</div>
               <p><a href="#"> Um texto descritivo com link apenas. </a></p>
@@ -199,10 +180,8 @@
       </section>
     </main>
 
-    <!-- ========== FOOTER ========== -->
     <footer class="footer" role="contentinfo">
       <div class="container footer-content">
-        <!-- Navegação de rodapé -->
         <nav class="footer-nav" role="navigation" aria-label="Menu do rodapé">
           <ul class="footer-nav-list">
             <li><a href="#home">HOME</a></li>
@@ -212,15 +191,14 @@
           </ul>
         </nav>
 
-        <!-- Texto do rodapé -->
         <div class="footer-brand">
           <span aria-hidden="true">RODAPE</span>
         </div>
       </div>
     </footer>
 
-    <!-- Splide JS (CDN) -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="script.js"></script>
+    <script src="mobile.js"></script>
   </body>
 </html>
