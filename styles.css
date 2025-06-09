@@ -36,6 +36,19 @@
  .flex-end {
   justify-content: flex-end;
  }
+
+ .flex-between{
+  justify-content: space-between;
+ }
+
+ .flex-center{
+  justify-content: center;
+  align-items: center;
+ }
+
+ .flex-base{
+  align-items: end;
+ }
  
  /* =====================================================
     HEADER
@@ -62,11 +75,16 @@
  }
  
  .logo-placeholder {
+  width: 300px;
+  height: 100px;
    background-color: #1a1a8a;
    border: 2px solid #fff;
    padding: 15px 30px;
    font-weight: bold;
    font-size: 18px;
+   color: #fff;
+  
+   margin: 5px 0;
  }
  
  .contact-info {
@@ -360,6 +378,8 @@ list-style: none;
    display: flex;
    justify-content: space-between;
    align-items: center;
+   flex-direction: column;
+   gap: 30px;
  }
  
  .footer-nav-list {
